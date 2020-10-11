@@ -22,16 +22,17 @@ button {
 h1 {
 	font-family: pixeled;
 	text-align: center;
-	color: white;
+	color: black;
 }
 
 body {
 	background-color: #00BFFF;
+	background-image:url("../img/fundo.png");
 }
 
 
 .memory-game {
-	width: 640px;
+	width: 700px;
 	height: 650px;
 	margin: auto;
 	display: flex;
@@ -47,13 +48,13 @@ body {
 	border-radius: 10px;
 	background: transparent;
 	padding: 20px;
-	position: absolute;
+    position: absolute;
 
 } 
 
 .card {
 	width: calc(25% - 10px);
-	height: calc(33.333% - 10px);
+	height: calc(15% - 10px);
 	margin: 5px;
 	position: relative;
 	transform: scale(1);
