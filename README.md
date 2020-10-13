@@ -9,7 +9,7 @@
 
 ## Instalação
 
-Para rodar o jogo, é necessário apenas baixar os arquivos em seu computador, entrar na pasta HTML e acessar o arquivo index.
+Para executar o jogo, é necessário apenas baixar os arquivos em seu computador, entrar na pasta HTML e acessar o arquivo index.
 
 
 ## Colaboradores
