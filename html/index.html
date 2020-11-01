@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<title>Memory-Game</title>
 	<link rel="stylesheet" type="text/css" href="../css/game.css">
+      <script src="../javascript/game.js"></script>
 </head>
 
-<body>
+<body onload="IniciarJogo()">
 	<section>
         <div>
 	    <header>
@@ -18,55 +19,43 @@
 
       <section class="memory-game">
 
-             <button><img src= "../img/renew.png">RESTART</button>
+             <button onclick="IniciarJogo()"><img src= "../img/renew.png">RESTART</button>
 
-      	<div class="card">
-      		<img class="front-card" src="../img/robotcop.jpg">
-      		<img class="back-card"  src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(1)">
+      		<img class="front-card" id="carta1" src="../img/robotcop.jpg">
       	</div>
-      		<div class="card">
-      		<img class="front-card" src="../img/robotcop.jpg">
-      		<img class="back-card"  src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(2)">
+      		<img class="front-card" id="carta2" src="../img/robotcop.jpg">
       	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/link.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(3)">
+      		<img class="front-card" id="carta3" src="../img/link.png">
+      	</div> 
+      	 <div class="card"  onclick="MarcaCarta(4)">
+      		<img class="front-card"  id="carta4"src="../img/link.png">
       	</div>
-      	 	<div class="card">
-      		<img class="front-card" src="../img/link.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(5)" >
+      		<img class="front-card" id="carta5" src="../img/scorpion.png">
       	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/scorpion.png" class="tamanho">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(6)">
+      		<img class="front-card" id="carta6" src="../img/scorpion.png">
       	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/scorpion.png" class="tamanho">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(7)">
+      		<img class="front-card" id="carta7" src="../img/pac.png">
       	</div>
-      		<div class="card">
-      		<img class="front-card" src="../img/pac.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	 <div class="card"  onclick="MarcaCarta(8)">
+      		<img class="front-card"  id="carta8"src="../img/pac.png">
       	</div>
-      		<div class="card">
-      		<img class="front-card" src="../img/pac.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+            <div class="card"  onclick="MarcaCarta(9)">
+      		<img class="front-card" id="carta9" src="../img/mega.png">
       	</div>
-      		<div class="card">
-      		<img class="front-card" src="../img/mega.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(10)">
+      		<img class="front-card" id="carta10" src="../img/mega.png">
       	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/mega.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card"  onclick="MarcaCarta(11)">
+      		<img class="front-card" id="carta11" src="../img/sonic.png">
       	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/sonic.png">
-      		<img class="back-card" src="../img/interrogacao.png">
-      	</div>
-      	<div class="card">
-      		<img class="front-card" src="../img/sonic.png">
-      		<img class="back-card" src="../img/interrogacao.png">
+      	<div class="card" onclick="MarcaCarta(12)">
+      		<img class="front-card" id="carta12" src="../img/sonic.png">
       	</div>
 
       </section>
