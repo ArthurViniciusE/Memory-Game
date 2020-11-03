@@ -1,26 +1,26 @@
 const CaminhoImagem="../img/interrogacao.png"; // Imagem da parte de trás da carta, uma interrogação.
 const Revelada=1; //Esse é o estado que a carta fica quando revelada.							
 const Escondida=0;//Esse é o estado que indica se a carta não foi revelada ou está escondida.
-const Marcada=-1;// Esse é o estado que as cartas ficam quando o jogador as clicka.
+const Marcada=-1;// Esse é o estado que as cartas ficam quando o jogador as clica.
 
 var pares=[];//Liga 2 cartas em um par que contêm a mesma imagem
 var imagens=[];// Contêm todas imagens usadas no jogo menos a da interrogação.
 var cartas=[];// Cria objetos que gerenciam o estado e a imagem que representa cada carta
-var quantidadeMarcada;// Guarda quantas cartas o jogador clickou.
+var quantidadeMarcada;// Guarda quantas cartas o jogador clicou.
 var TotalCartas;//Define o total de cartas, é usado para automatizar vários loops
 var ParesRevelados;
-var indicesEscolhidos=[];// Salva os índices das duas cartas clickadas pelo jogador.
+var indicesEscolhidos=[];// Salva os índices das duas cartas clicadas pelo jogador.
 
 function MarcaCarta(x){// Função chamada no onclick, é ativada quando o jogador clica em uma carta
 	indice=x-1 // Define os índices que vão ser usados no array, tem -1 pq eu comecei a partir do número 1
-	if (!cartas[indice].estaMarcada() && cartas[indice].estaEscondida()&& quantidadeMarcada<2) { // Checa se a carta está marcada, e se a quantidade de cartas marcadas é menor que 2
-		cartas[indice].estado=Marcada;// Muda o estado da carta clickada para marcada.
+	if (!cartas[indice].estaMarcada() && cartas[indice].estaEscondida()&& quantidadeMarcada<2) { // Checa se a carta está marcada e se a quantidade de cartas marcadas é menor que 2
+		cartas[indice].estado=Marcada;// Muda o estado da carta clicada para marcada.
 		Revelar(x); // Mostra a carta.
 		indicesEscolhidos[quantidadeMarcada]=indice; // Array que separa os índices escolhidos índicesEscolhidos[0]= 0 / IE[1]=1.
-		quantidadeMarcada++;//Incrementa caso o jogador tenha clickado em uma carta.
+		quantidadeMarcada++;//Incrementa caso o jogador tenha clicado em uma carta.
 	}
-	console.log("Voce clicou na carta: "+x);//Mostra no console qual carta foi clickada.
-	if(quantidadeMarcada==2){//Se o jogador tiver clickado em duas cartas entra no if para fazer as validações.
+	console.log("Voce clicou na carta: "+x);//Mostra no console qual carta foi clicada.
+	if(quantidadeMarcada==2){//Se o jogador tiver clicado em duas cartas entra no if para fazer as validações.
 		if(ValidarPares(pares,cartas)){//Verifica entre todos pares se algum foi acertado.
 			if (cartas[indicesEscolhidos[0]].estado==Revelada && cartas[indicesEscolhidos[1]].estado==Revelada ) {//Verifica nos 2 índices se as cartas tiveram seu estado alterado para "Revelado"
 				ParesRevelados++;
@@ -44,14 +44,14 @@ function Revelar(x){
 	 document.getElementById("carta"+(x)).src=cartas[x-1].imagemRevelada; // Mostra a imagem do array de "cartas" x-1
 }
 
-function IniciarJogo(){ // Tudo isso é inicializado quando a página é carregada ou quando o jogador clicka no reset
+function IniciarJogo(){ // Tudo isso é inicializado quando a página é carregada ou quando o jogador clica no reset
 	ParesRevelados=0;
 	quantidadeMarcada=0;
 
 	Definirimagens();// Inicializa as imagens que vão ser usadas
 	EsconderCartas();// Esconde todas as imagens com a da interrogação
 	IniciarCartas();// Inicia as classes
-	DistribuirCartas();// distribui as imagens entre as cartas e prepara os pares
+	DistribuirCartas();// Distribui as imagens pelas cartas e prepara os pares.
 }
 
 function EsconderCartas(){//Esconde todas cartas
