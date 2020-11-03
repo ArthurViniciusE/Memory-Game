@@ -1,11 +1,11 @@
 const CaminhoImagem="../img/interrogacao.png"; // Imagem da parte de trás da carta, uma interrogação.
-const Revelada=1; //Esse é o estado que a carta fica quando revelada							
-const Escondida=0;//Esse é o estado indica que a carta não foi revelada ou está escondida
-const Marcada=-1;// Esse é o estado que as cartas ficam quando o jogador clicka
+const Revelada=1; //Esse é o estado que a carta fica quando revelada.							
+const Escondida=0;//Esse é o estado que indica se a carta não foi revelada ou está escondida.
+const Marcada=-1;// Esse é o estado que as cartas ficam quando o jogador as clicka.
 
 var pares=[];//Liga 2 cartas em um par que contêm a mesma imagem
 var imagens=[];// Contêm todas imagens usadas no jogo menos a da interrogação.
-var cartas=[];// Cria objetos que gerenciam o estado e a imagem de cada imagem que representa uma carta
+var cartas=[];// Cria objetos que gerenciam o estado e a imagem que representa cada carta
 var quantidadeMarcada;// Guarda quantas cartas o jogador clickou.
 var TotalCartas;//Define o total de cartas, é usado para automatizar vários loops
 var ParesRevelados;
