@@ -40,7 +40,7 @@ body {
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
-	perspective: 1000px;
+	perspective: 100px;
 
 }
 

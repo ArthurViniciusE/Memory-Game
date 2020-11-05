@@ -6,27 +6,25 @@
 button {
 	
 	font-family: pixeled;
-	font-size: 13px;
+	font-size: 14px;
 	cursor: pointer;
-	background: white;
-	border-radius: 10px;
-	left: 500px;	
 	z-index: 1;
-	  width: 200px;
-    text-align: relative;
-        left: 50%;
-        top: 50%;
-        margin-left:200px;
-        margin-top:250px;
+    width: 200px;
+    text-align: absolute;
+    margin-left:200px;
+	margin-top:250px;
     padding: 2px 2px;
-    border-radius: 5px;
+    border-radius: 100px;
     background-color: #f8d870;
-    box-shadow: #885818;
+	box-shadow: 0 4px 0 #885818;
 
 }
 body {
 	background-color: #00BFFF;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-image:url("../img/fundo.png");
+
 }
 
 h1 {
@@ -35,7 +33,3 @@ h1 {
 
 }
 
-@font-face{
-	font-family: pixeled;
-    src: url(../font/pixeled.ttf) ;
-}
