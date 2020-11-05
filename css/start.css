@@ -29,3 +29,13 @@ body {
 	background-image:url("../img/fundo.png");
 }
 
+h1 {
+	text-align: center;
+	font-family: pixeled;
+
+}
+
+@font-face{
+	font-family: pixeled;
+    src: url(../font/pixeled.ttf) ;
+}
