@@ -1,6 +1,6 @@
 @font-face{
 	font-family: pixeled;
-    src: url(../font/pixeled.ttf) ;
+    src: url(pixeled.ttf) ;
 }
 
 button {
@@ -23,7 +23,7 @@ body {
 	background-color: #00BFFF;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image:url("../img/fundo.png");
+	background-image:url("fundo.png");
 
 }
 

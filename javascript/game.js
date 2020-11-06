@@ -1,4 +1,4 @@
-const CaminhoImagem="../img/interrogacao.png"; // Imagem da parte de trás da carta, uma interrogação.
+const CaminhoImagem="interrogacao.png"; // Imagem da parte de trás da carta, uma interrogação.
 const Revelada=1; //Esse é o estado que a carta fica quando revelada.							
 const Escondida=0;//Esse é o estado que indica se a carta não foi revelada ou está escondida.
 const Marcada=-1;// Esse é o estado que as cartas ficam quando o jogador as clica.
@@ -65,12 +65,12 @@ function EscondeCarta(x){//Esconde a carta x
 }
 
 function Definirimagens(){ // Define todos os caminhos para as imagens.
-	imagens[0]="../img/sonic.png";
-	imagens[1]="../img/mega.png";
-	imagens[2]="../img/pac.png";
-	imagens[3]="../img/scorpion.png";
-	imagens[4]="../img/link.png";
-	imagens[5]="../img/robotcop.jpg";
+	imagens[0]="sonic.png";
+	imagens[1]="mega.png";
+	imagens[2]="pac.png";
+	imagens[3]="scorpion.png";
+	imagens[4]="link.png";
+	imagens[5]="robotcop.jpg";
 	TotalCartas=imagens.length*2;
 }
 

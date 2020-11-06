@@ -6,7 +6,7 @@
 }
 @font-face{
 	font-family: pixeled;
-    src: url(../font/pixeled.ttf) ;
+    src: url(pixeled.ttf) ;
 }
 
 button {
@@ -30,7 +30,7 @@ h1 {
 
 body {
 	background-color: #00BFFF;
-	background-image:url("../img/fundo.png");
+	background-image:url("fundo.png");
 }
 
 
