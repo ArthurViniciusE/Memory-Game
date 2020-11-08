@@ -11,17 +11,17 @@ var TotalCartas;//Define o total de cartas, é usado para automatizar vários lo
 var ParesRevelados;
 var indicesEscolhidos=[];// Salva os índices das duas cartas clicadas pelo jogador.
 
-function MarcaCarta(x){// Função chamada no onclick, é ativada quando o jogador clica em uma carta
+function marcaCarta(x){// Função chamada no onclick, é ativada quando o jogador clica em uma carta
 	indice=x-1 // Define os índices que vão ser usados no array, tem -1 pq eu comecei a partir do número 1
 	if (!cartas[indice].estaMarcada() && cartas[indice].estaEscondida()&& quantidadeMarcada<2) { // Checa se a carta está marcada e se a quantidade de cartas marcadas é menor que 2
 		cartas[indice].estado=Marcada;// Muda o estado da carta clicada para marcada.
-		Revelar(x); // Mostra a carta.
+		revelar(x); // Mostra a carta.
 		indicesEscolhidos[quantidadeMarcada]=indice; // Array que separa os índices escolhidos índicesEscolhidos[0]= 0 / IE[1]=1.
 		quantidadeMarcada++;//Incrementa caso o jogador tenha clicado em uma carta.
 	}
 	console.log("Voce clicou na carta: "+x);//Mostra no console qual carta foi clicada.
 	if(quantidadeMarcada==2){//Se o jogador tiver clicado em duas cartas entra no if para fazer as validações.
-		if(ValidarPares(pares,cartas)){//Verifica entre todos pares se algum foi acertado.
+		if(validarPares(pares,cartas)){//Verifica entre todos pares se algum foi acertado.
 			if (cartas[indicesEscolhidos[0]].estado==Revelada && cartas[indicesEscolhidos[1]].estado==Revelada ) {//Verifica nos 2 índices se as cartas tiveram seu estado alterado para "Revelado"
 				ParesRevelados++;
 				if (ParesRevelados!=TotalCartas/2) {//Se ainda não foram revelados todos pares zera a variável abaixo para o jogador poder continuar marcando cartas.
@@ -32,39 +32,39 @@ function MarcaCarta(x){// Função chamada no onclick, é ativada quando o jogad
 				}
 			}
 		}else{//Caso o jogador tenha errado o par, isto esconde as cartas marcadas.
-			setTimeout(function(){ EscondeCarta(indicesEscolhidos[0]+1)}, 200);// O delay é para o jogador conseguir visualizar que errou.
-			setTimeout(function(){ EscondeCarta(indicesEscolhidos[1]+1)}, 200);// 
+			setTimeout(function(){ escondeCarta(indicesEscolhidos[0]+1)}, 200);// O delay é para o jogador conseguir visualizar que errou.
+			setTimeout(function(){ escondeCarta(indicesEscolhidos[1]+1)}, 200);// 
 			quantidadeMarcada=0;
 		}
 	
 	}
 }
 
-function Revelar(x){
+function revelar(x){
 	 document.getElementById("carta"+(x)).src=cartas[x-1].imagemRevelada; // Mostra a imagem do array de "cartas" x-1
 }
 
-function IniciarJogo(){ // Tudo isso é inicializado quando a página é carregada ou quando o jogador clica no reset
+function iniciarJogo(){ // Tudo isso é inicializado quando a página é carregada ou quando o jogador clica no reset
 	ParesRevelados=0;
 	quantidadeMarcada=0;
 
-	Definirimagens();// Inicializa as imagens que vão ser usadas
-	EsconderCartas();// Esconde todas as imagens com a da interrogação
-	IniciarCartas();// Inicia as classes
-	DistribuirCartas();// Distribui as imagens pelas cartas e prepara os pares.
+	definirimagens();// Inicializa as imagens que vão ser usadas
+	esconderCartas();// Esconde todas as imagens com a da interrogação
+	iniciarCartas();// Inicia as classes
+	distribuirCartas();// Distribui as imagens pelas cartas e prepara os pares.
 }
 
-function EsconderCartas(){//Esconde todas cartas
+function esconderCartas(){//Esconde todas cartas
 	for (var i = 0 ; i < TotalCartas; i++) {
-		EscondeCarta(i+1); // Bota a interrogação em cima de todas as imagens.
+		escondeCarta(i+1); // Bota a interrogação em cima de todas as imagens.
 	}
 }
 
-function EscondeCarta(x){//Esconde a carta x
+function escondeCarta(x){//Esconde a carta x
 	 document.getElementById("carta"+(x)).src=CaminhoImagem;
 }
 
-function Definirimagens(){ // Define todos os caminhos para as imagens.
+function definirimagens(){ // Define todos os caminhos para as imagens.
 	imagens[0]="sonic.png";
 	imagens[1]="mega.png";
 	imagens[2]="pac.png";
@@ -74,7 +74,7 @@ function Definirimagens(){ // Define todos os caminhos para as imagens.
 	TotalCartas=imagens.length*2;
 }
 
-function IniciarCartas(){ // Inicia as cartas, 12 imagens, 6 pares
+function iniciarCartas(){ // Inicia as cartas, 12 imagens, 6 pares
 	for (var i = 0; i < TotalCartas; i++) {
 		cartas[i]=new Carta();
 		if (i%2==0) {
@@ -83,7 +83,7 @@ function IniciarCartas(){ // Inicia as cartas, 12 imagens, 6 pares
 	}
 }
 
-function DistribuirCartas(){ //Distribui as cartas aleatóriamente
+function distribuirCartas(){ //Distribui as cartas aleatóriamente
 	let cartasAtribuidas;//Guarda quantas cartas faltam receber imagens.
 	let controlePar=0;// Guarda quais as cartas do par.
 	let imagemAtual=0;// Quantas imagens já foram.
@@ -117,7 +117,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * (max+1)); //math.random gera um numero aleatório de 0 a 1 mas não chega a 1.
 }
 
-function ValidarPares(par,cartas){
+function validarPares(par,cartas){
      	let controle = false;
      	for (var i = 0; i < par.length; i++) {//Verifica todos pares que existem.
      		if (par[i].estado==Escondida) {//Serve apenas os pares escondidos.
@@ -178,3 +178,7 @@ class Carta{//Classe que controla as cartas do jogo
 	}	
 
 };
+
+exports.Carta = Carta
+exports.Par = Par
+exports.distribuirCartas = distribuirCartas
