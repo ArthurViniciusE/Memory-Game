@@ -7,6 +7,7 @@ app.use(express.static(__dirname + '/javascript'))
 app.use(express.static(__dirname + '/html'))
 app.use(express.static(__dirname + '/font'))
 app.use(express.static(__dirname + '/img'))
+app.use(express.static(__dirname + '/audio'))
 
 const { Carta, Par, distribuirCartas } = require(__dirname + '/javascript/game.js')
 var carta = new Carta()
