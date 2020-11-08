@@ -15,13 +15,46 @@ button {
 	font-size: 13px;
 	cursor: pointer;
 	padding: 2px 2px;
-	background: white;
 	border-radius: 10px;
 	position: absolute;
-	left: 580px;	
+	right: 150px;	
 	z-index: 1;
 }
-
+.btn {
+	display: inline-block;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #f8d870;
+	box-shadow: 0 4px 0 #885818;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	border-radius: 0.5em;
+	box-shadow: 3px 3px 0 3px #930;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn:active {
+box-shadow: 0 0 0 0 #930,
+inset 4px 4px 4px #930;
+transform: translate(6px, 6px);
+}
+.btn2{
+	top: 60px;
+	display: inline-block;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #f8d870;
+	box-shadow: 0 4px 0 #885818;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	border-radius: 0.5em;
+	box-shadow: 3px 3px 0 3px #930;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn2:active{
+	box-shadow: 0 0 0 0 #930,
+	inset 4px 4px 4px #930;
+	transform: translate(6px, 6px);
+}
 h1 {
 	font-family: pixeled;
 	text-align: center;

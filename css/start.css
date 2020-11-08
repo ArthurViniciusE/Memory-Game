@@ -6,7 +6,7 @@
 button {
 	
 	font-family: pixeled;
-	font-size: 14px;
+	font-size: 15px;
 	cursor: pointer;
 	z-index: 1;
     width: 200px;
@@ -14,11 +14,25 @@ button {
     margin-left:200px;
 	margin-top:250px;
     padding: 2px 2px;
-    border-radius: 100px;
-    background-color: #f8d870;
-	box-shadow: 0 4px 0 #885818;
-
 }
+.btn {
+	display: inline-block;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #f8d870;
+	box-shadow: 0 4px 0 #885818;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	border-radius: 0.5em;
+	box-shadow: 3px 3px 0 3px #930;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn:active {
+box-shadow: 0 0 0 0 #930,
+inset 4px 4px 4px #930;
+transform: translate(6px, 6px);
+}
+
 body {
 	background-color: #00BFFF;
 	background-size: cover;
