@@ -35,8 +35,8 @@ button {
     border-radius: 0.5em;
     box-shadow: 3px 3px 0 3px #930;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    margin-right: 500px;
-    margin-top: 10px;
+    margin-right: 550px;
+    margin-top: 12px;
     margin-bottom: 25px;
 }
 

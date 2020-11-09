@@ -35,8 +35,8 @@ button {
     border-radius: 0.5em;
     box-shadow: 3px 3px 0 3px #930;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    margin-right: 500px;
-    margin-top: 10px;
+    margin-right: 550px;
+    margin-top: 12px;
     margin-bottom: 25px;
 }
 
@@ -49,7 +49,7 @@ button {
     background-color: seashell;
     border-radius: 10px;
     text-align: center;
-    height: 900px;
+    height: 1350px;
     width: 600px;
     margin-left: 25%;
     font-family: pixel;
@@ -69,6 +69,31 @@ button {
 }
 .parExemplo{
     background-image: url("pac.png");
+    width: 300px;
+    height: 150px;
+    background-size: 150px 150px;
+    margin-left: 25%;
+}
+
+.exemplo{
+    background-image: url("exemplo2.png");
+    width: 300px;
+    height: 150px;
+    background-size: 300px 150px;
+    margin-left: 25%;
+    background-repeat: no-repeat;
+}
+
+.exemplo2{
+    background-image: url("double.png");
+    width: 300px;
+    height: 150px;
+    background-size: 300px 150px;
+    margin-left: 25%;
+    background-repeat: no-repeat;
+}
+.costasExemplo{
+    background-image: url("interrogacao.png");
     width: 300px;
     height: 150px;
     background-size: 150px 150px;
