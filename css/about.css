@@ -1,11 +1,15 @@
+@font-face{
+	font-family: pixel;
+    src: url(FreePixel.ttf) ;
+}
+@font-face{
+	font-family: pixeled;
+    src: url(pixeled.ttf) ;
+}
+
 body {
     background-color: #00BFFF;
     background-image: url("fundo.png");
-}
-
-@font-face {
-    font-family: pixeled;
-    src: url(pixeled.ttf);
 }
 
 button {
@@ -20,6 +24,7 @@ button {
 }
 
 .btn {
+    font-family: pixeled;
     display: inline-block;
     border: 0;
     text-decoration: none;
@@ -30,28 +35,12 @@ button {
     border-radius: 0.5em;
     box-shadow: 3px 3px 0 3px #930;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-right: 500px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .btn:active {
-    box-shadow: 0 0 0 0 #930, inset 4px 4px 4px #930;
-    transform: translate(6px, 6px);
-}
-
-.btn2 {
-    top: 60px;
-    display: inline-block;
-    border: 0;
-    text-decoration: none;
-    color: #000;
-    background: #f8d870;
-    box-shadow: 0 4px 0 #885818;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 0.5em;
-    box-shadow: 3px 3px 0 3px #930;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.btn2:active {
     box-shadow: 0 0 0 0 #930, inset 4px 4px 4px #930;
     transform: translate(6px, 6px);
 }
@@ -63,17 +52,17 @@ button {
     height: 900px;
     width: 600px;
     margin-left: 25%;
+    font-family: pixel;
+    font-size: 22px;
    
-}
-
-.about:h1 {
-    text-decoration-color: red;
 }
 
 .logoIF{
     height: 150px;
-    width:  400px;
+    width: 400px;
     background-image: url("/ifpe_logo.png");
-    background-size: 400px 150px;
+    background-size: 300px 150px;
     background-repeat: no-repeat;
+    margin-left: 25%;
+    
 }
