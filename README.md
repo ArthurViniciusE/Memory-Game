@@ -9,7 +9,11 @@
 
 ## Instalação
 
-Para executar o jogo, é necessário apenas baixar os arquivos em seu computador, entrar na pasta HTML e acessar o arquivo index.
+#Para executar o game é necessário que você baixe o arquivo zip, ou clone o repositório.
+- Em seguida instale o Node.js em sua máquina [https://nodejs.org/en/].
+- Após a instalção do Node.js, entre no diretório do jogo pelo terminal, a pasta Memory-Game.
+- Em seguida utilize o comando nodemon server.js, para executar o servidor.
+- E por fim, em seu navegador digite localhhost:8000 na barra de pesquisa para entrar no game.
 
 
 ## Colaboradores
